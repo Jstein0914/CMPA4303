@@ -188,6 +188,7 @@ a:hover {
         width: auto;
         top: auto;
         bottom: auto;
+        margin-bottom: 20px;
     }
 
     .content-area {
