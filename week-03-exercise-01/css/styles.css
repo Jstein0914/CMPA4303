@@ -25,28 +25,36 @@ header p {
     margin-top: 8px;
 }
 
-/* Main Content */
-main {
-    max-width: 1000px;
+/* Main Page Layout */
+.page-layout {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    align-items: start;
 }
 
-/* Section Title */
-h2 {
+/* Left Side Navigation Panel */
+.side-nav {
+    background-color: tan;
+    padding: 20px;
+    border-radius: 12px;
+    position: sticky;
+    top: 20px;
+}
+
+.side-nav h2 {
     color: brown;
     margin-top: 0;
 }
 
-/* Navigation Box */
-nav {
-    background-color: tan;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+.side-nav p {
+    margin-bottom: 20px;
 }
 
-/* Navigation List */
+/* Navigation Box */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -55,7 +63,7 @@ nav ul {
 
 nav li {
     margin-bottom: 12px;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
 }
 
 /* Navigation Links */
@@ -68,6 +76,11 @@ nav a {
 nav a:hover {
     text-decoration: underline;
     color: brown;
+}
+
+/* Content Area */
+.content-area {
+    width: 100%;
 }
 
 /* Grid Layout */
@@ -86,7 +99,7 @@ nav a:hover {
     transition: 0.3s;
 }
 
-/* 🔥 Highlight selected card */
+/* Highlight selected card */
 .profile-card:target {
     border: 3px solid blue;
     background-color: lightyellow;
@@ -152,6 +165,17 @@ a {
 
 a:hover {
     color: brown;
+}
+
+/* Tablet Layout */
+@media (max-width: 900px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .side-nav {
+        position: static;
+    }
 }
 
 /* Mobile Layout */
