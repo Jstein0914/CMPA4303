@@ -27,7 +27,7 @@ header p {
 
 /* Main Content */
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -70,13 +70,19 @@ nav a:hover {
     color: brown;
 }
 
+/* Grid Layout */
+.family-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
 /* Family Member Cards */
 section {
     background-color: white;
     border: 1px solid tan;
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 25px;
 }
 
 /* Card Titles */
@@ -98,4 +104,11 @@ a {
 
 a:hover {
     color: brown;
+}
+
+/* Mobile Layout */
+@media (max-width: 700px) {
+    .family-grid {
+        grid-template-columns: 1fr;
+    }
 }
