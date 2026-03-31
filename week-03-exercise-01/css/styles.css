@@ -113,10 +113,12 @@ nav a:hover {
     color: brown;
 }
 
+/* 🔥 UPDATED ROLE COLOR */
 .profile-heading .role {
-    margin: 4px 0 0 0;
-    color: dimgray;
+    margin: 6px 0 0 0;
+    color: blue;
     font-weight: bold;
+    font-size: 0.9rem;
 }
 
 /* Details section */
