@@ -77,27 +77,67 @@ nav a:hover {
     gap: 20px;
 }
 
-/* Family Member Cards */
-section {
+/* Profile Card */
+.profile-card {
     background-color: white;
     border: 1px solid tan;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 20px;
 }
 
-/* Card Titles */
-section h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+/* Top section of card */
+.profile-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Circle initials */
+.profile-photo {
+    width: 60px;
+    height: 60px;
+    background-color: brown;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+/* Name and role */
+.profile-heading h3 {
+    margin: 0;
     color: brown;
 }
 
-/* Paragraph spacing */
-p {
+.profile-heading .role {
+    margin: 4px 0 0 0;
+    color: dimgray;
+    font-weight: bold;
+}
+
+/* Details section */
+.profile-details p {
     margin: 8px 0;
 }
 
-/* Links */
+/* Link area */
+.profile-link {
+    margin-top: 15px;
+}
+
+.profile-link a {
+    color: blue;
+}
+
+.profile-link a:hover {
+    color: brown;
+}
+
+/* General links */
 a {
     color: blue;
 }
