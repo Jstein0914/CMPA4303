@@ -27,11 +27,12 @@ header p {
 
 /* Main Page Layout */
 .page-layout {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 20px 30px 20px 20px;
     display: grid;
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 320px 1fr;
     gap: 30px;
     align-items: start;
 }
@@ -43,6 +44,9 @@ header p {
     border-radius: 12px;
     position: sticky;
     top: 20px;
+    margin-left: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .side-nav h2 {
@@ -171,10 +175,12 @@ a:hover {
 @media (max-width: 900px) {
     .page-layout {
         grid-template-columns: 1fr;
+        padding: 20px;
     }
 
     .side-nav {
         position: static;
+        margin-left: 0;
     }
 }
 
