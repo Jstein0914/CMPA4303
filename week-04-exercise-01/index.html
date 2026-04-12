@@ -29,16 +29,19 @@
 
         <section class="content-area">
             <div class="family-grid">
-                <section id="husband" class="profile-card">
-                    <div class="profile-top">
-                        <div class="profile-photo">JS</div>
-                        <div class="profile-heading">
-                            <h3>Jeff Stein</h3>
+
+                <details id="husband" class="profile-card" open>
+                    <summary>
+                        <div class="profile-top">
+                            <div class="profile-photo">JS</div>
+                            <div class="profile-heading">
+                                <h3>Jeff Stein</h3>
+                            </div>
                         </div>
-                    </div>
+                    </summary>
 
                     <div class="profile-details">
-                        <p><strong>Relationship:</strong>Husband</p>
+                        <p><strong>Relationship:</strong> Husband</p>
                         <p><strong>Location of Birth:</strong> Evanston, Illinois</p>
                         <p><strong>Date of Birth:</strong> September 14, 1971</p>
                     </div>
@@ -46,15 +49,17 @@
                     <p class="profile-link">
                         <a href="https://www.google.com/maps?q=Evanston,Illinois" target="_blank">View location on map</a>
                     </p>
-                </section>
+                </details>
 
-                <section id="wife" class="profile-card">
-                    <div class="profile-top">
-                        <div class="profile-photo">MS</div>
-                        <div class="profile-heading">
-                            <h3>Melissa Stein</h3>
+                <details id="wife" class="profile-card">
+                    <summary>
+                        <div class="profile-top">
+                            <div class="profile-photo">MS</div>
+                            <div class="profile-heading">
+                                <h3>Melissa Stein</h3>
+                            </div>
                         </div>
-                    </div>
+                    </summary>
 
                     <div class="profile-details">
                         <p><strong>Relationship:</strong> Wife</p>
@@ -65,16 +70,18 @@
                     <p class="profile-link">
                         <a href="https://www.google.com/maps?q=Manila,Philippines" target="_blank">View location on map</a>
                     </p>
-                </section>
+                </details>
 
-                <section id="daughter" class="profile-card">
-                    <div class="profile-top">
-                        <div class="profile-photo">GS</div>
-                        <div class="profile-heading">
-                            <h3>Gabrielle Stein</h3>
-                         </div>
-                    </div>
-                    
+                <details id="daughter" class="profile-card">
+                    <summary>
+                        <div class="profile-top">
+                            <div class="profile-photo">GS</div>
+                            <div class="profile-heading">
+                                <h3>Gabrielle Stein</h3>
+                            </div>
+                        </div>
+                    </summary>
+
                     <div class="profile-details">
                         <p><strong>Relationship:</strong> Daughter</p>
                         <p><strong>Location of Birth:</strong> Frisco, Texas</p>
@@ -84,15 +91,17 @@
                     <p class="profile-link">
                         <a href="https://www.google.com/maps?q=Frisco,Texas" target="_blank">View location on map</a>
                     </p>
-                </section>
+                </details>
 
-                <section id="son" class="profile-card">
-                    <div class="profile-top">
-                        <div class="profile-photo">CS</div>
-                        <div class="profile-heading">
-                            <h3>Caleb Stein</h3>
+                <details id="son" class="profile-card">
+                    <summary>
+                        <div class="profile-top">
+                            <div class="profile-photo">CS</div>
+                            <div class="profile-heading">
+                                <h3>Caleb Stein</h3>
+                            </div>
                         </div>
-                    </div>
+                    </summary>
 
                     <div class="profile-details">
                         <p><strong>Relationship:</strong> Son</p>
@@ -103,9 +112,26 @@
                     <p class="profile-link">
                         <a href="https://www.google.com/maps?q=Frisco,Texas" target="_blank">View location on map</a>
                     </p>
-                </section>
+                </details>
+
             </div>
         </section>
     </main>
+
+    <!-- JavaScript for accordion behavior -->
+    <script>
+        const cards = document.querySelectorAll("details.profile-card");
+
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+                cards.forEach(other => {
+                    if (other !== card) {
+                        other.removeAttribute("open");
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
