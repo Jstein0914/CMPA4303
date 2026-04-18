@@ -1,19 +1,30 @@
 # Explorer of the Family Roots
 
-Explorer of the Family Roots is a web-based project that presents a structured and interactive family tree. The site displays individual family members as profile cards, each containing key information such as relationship, birth location, and date of birth. Users can interact with the site by selecting a family member to view their details and access location-based map links.
+## What is this?
 
-## Purpose
+Explorer of the Family Roots is a website that presents an interactive and structured view of a family. The site displays individual family members as profile cards, each containing key information such as relationship, birth location, and date of birth.
 
-The purpose of this project is to create a clear and interactive way to organize and display family information in a digital format. This project is designed for users who want to explore family relationships and view individual details in a structured and user-friendly layout. It also serves as a foundation for expanding into a more dynamic and customizable family tree experience in the future.
+Users can interact with the site by selecting a family member from the left side navigation panel or clicking directly on a card. When selected, the card expands while all others collapse, allowing the user to focus on one individual at a time. Each profile also includes a link to view the family member’s birth location on a map.
 
-## Tools and Technologies
+## Why does it exist?
+
+The purpose of this project is to explore family relationships in a digital format. Instead of presenting information in a static list, this project improves usability by allowing users to interact with the content and focus on individual family members.
+
+Looking forward, the goal of this project is to evolve into a more dynamic and visual family tree system. The final vision includes:
+
+- A visual tree layout with branches connecting family members.
+- The ability to add and manage family members dynamically instead of hard-coded HTML.
+- Support for multiple family trees (an “orchard” of families), allowing users to explore different family groups within the same system.
+
+## What tools did I use?
 
 - **HTML** – Used to structure the content and organize the layout of the site.
 - **CSS** – Used for styling, layout design, and responsive behavior across desktop, tablet, and mobile devices.
-- **JavaScript** – Used to implement the accordion feature, allowing users to expand and collapse individual family member cards for improved usability.
-- **VS Code** – Used as the primary code editor for building and organizing the project files.
-- **GitHub & GitHub Desktop** – Used for version control and managing project updates.
+- **JavaScript** – Used to implement the accordion feature, allowing users to expand and collapse individual family member cards and control interactivity.
+- **VS Code** – Used as the primary code editor for building and organizing the project.
+- **GitHub & GitHub Desktop** – Used for version control and managing updates to the project.
 - **GitHub Pages** – Used to deploy the project and make it accessible through a live URL.
+- **ChatGPT (AI Assistant)** – Used as a collaborative tool to help troubleshoot issues, refine code, and improve overall structure and design decisions throughout the project.
 
 ## Live Project
 
