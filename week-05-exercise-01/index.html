@@ -28,8 +28,43 @@
         </aside>
 
         <section class="content-area">
-            <div class="family-grid">
+            <section class="tree-view">
+                <h2>Family Tree View</h2>
+                <p>Select a family member in the tree to open their profile card below.</p>
 
+                <div class="tree">
+                    <div class="tree-row parents">
+                        <button class="tree-person" type="button" data-target="husband">
+                            Jeff Stein
+                            <span>Husband</span>
+                        </button>
+
+                        <button class="tree-person" type="button" data-target="wife">
+                            Melissa Stein
+                            <span>Wife</span>
+                        </button>
+                    </div>
+
+                    <div class="tree-connector">
+                        <div class="vertical-line"></div>
+                        <div class="horizontal-line"></div>
+                    </div>
+
+                    <div class="tree-row children">
+                        <button class="tree-person" type="button" data-target="daughter">
+                            Gabrielle Stein
+                            <span>Daughter</span>
+                        </button>
+
+                        <button class="tree-person" type="button" data-target="son">
+                            Caleb Stein
+                            <span>Son</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <div class="family-grid">
                 <section id="husband" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
@@ -121,7 +156,6 @@
                         </p>
                     </div>
                 </section>
-
             </div>
         </section>
     </main>
@@ -129,18 +163,34 @@
     <script>
         const cards = document.querySelectorAll(".collapsible-card");
         const navLinks = document.querySelectorAll(".side-nav nav a");
+        const treeButtons = document.querySelectorAll(".tree-person");
 
         function closeAllCards() {
             cards.forEach(card => {
                 card.classList.remove("active-card");
             });
+
+            treeButtons.forEach(button => {
+                button.classList.remove("active-tree-person");
+            });
         }
 
         function openCard(cardId) {
             closeAllCards();
+
             const selectedCard = document.getElementById(cardId);
+            const selectedTreeButton = document.querySelector(`.tree-person[data-target="${cardId}"]`);
+
             if (selectedCard) {
                 selectedCard.classList.add("active-card");
+                selectedCard.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+
+            if (selectedTreeButton) {
+                selectedTreeButton.classList.add("active-tree-person");
             }
         }
 
@@ -152,13 +202,27 @@
             });
         });
 
+        treeButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const targetId = this.getAttribute("data-target");
+                openCard(targetId);
+            });
+        });
+
         cards.forEach(card => {
             const toggleButton = card.querySelector(".card-toggle");
+
             toggleButton.addEventListener("click", function() {
                 const isActive = card.classList.contains("active-card");
                 closeAllCards();
+
                 if (!isActive) {
                     card.classList.add("active-card");
+
+                    const selectedTreeButton = document.querySelector(`.tree-person[data-target="${card.id}"]`);
+                    if (selectedTreeButton) {
+                        selectedTreeButton.classList.add("active-tree-person");
+                    }
                 }
             });
         });

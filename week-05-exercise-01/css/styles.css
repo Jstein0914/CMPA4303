@@ -14,6 +14,12 @@ header {
     color: white;
     text-align: center;
     padding: 25px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
 }
 
 header h1 {
@@ -31,7 +37,7 @@ header p {
 .page-layout {
     width: 100%;
     margin: 0;
-    padding: 20px 40px 20px 0;
+    padding: 172px 40px 20px 0;
     box-sizing: border-box;
 }
 
@@ -85,6 +91,88 @@ nav a:hover {
     width: 1100px;
     margin-left: 500px;
     margin-right: auto;
+}
+
+/* Family Tree View */
+.tree-view {
+    background-color: white;
+    border: 1px solid tan;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+}
+
+.tree-view h2 {
+    color: brown;
+    margin-top: 0;
+}
+
+.tree-view p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Tree Container */
+.tree {
+    text-align: center;
+}
+
+/* Tree Rows */
+.tree-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Tree Person Buttons */
+.tree-person {
+    background-color: tan;
+    color: black;
+    border: 2px solid brown;
+    border-radius: 12px;
+    padding: 16px 24px;
+    min-width: 190px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.tree-person span {
+    display: block;
+    color: blue;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.tree-person:hover {
+    background-color: lightyellow;
+}
+
+/* Active Tree Person */
+.active-tree-person {
+    background-color: lightyellow;
+    border: 3px solid blue;
+}
+
+/* Tree Connector Lines */
+.tree-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70px;
+}
+
+.vertical-line {
+    width: 4px;
+    height: 35px;
+    background-color: brown;
+}
+
+.horizontal-line {
+    width: 320px;
+    height: 4px;
+    background-color: brown;
 }
 
 /* Grid Layout */
@@ -205,6 +293,11 @@ a:hover {
 
 /* Mobile */
 @media (max-width: 900px) {
+    header {
+        position: static;
+        width: auto;
+    }
+
     .side-nav {
         position: static;
         width: auto;
@@ -221,6 +314,21 @@ a:hover {
 
     .page-layout {
         padding: 20px;
+    }
+
+    .tree-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .tree-connector {
+        height: 50px;
+    }
+
+    .horizontal-line {
+        width: 4px;
+        height: 30px;
     }
 
     .family-grid {
