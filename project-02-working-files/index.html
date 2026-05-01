@@ -36,64 +36,74 @@
                 <h2>Family Tree View</h2>
                 <p>Select a family member in the tree to open their profile card below.</p>
 
-                <div class="tree">
+                <div class="tree final-tree">
 
-                    <div class="tree-generation grandparents">
-                        <div class="family-branch">
-                            <button class="tree-person" type="button" data-target="paternal-grandfather">
-                                Howard Stein
-                                <span>Grandfather</span>
+                    <div class="tree-generation grandparent-generation">
+                        <div class="tree-couple">
+                            <button class="tree-person tree-circle" type="button" data-target="paternal-grandfather">
+                                <span class="first-name">Howard</span>
+                                <span class="last-name">Stein</span>
                             </button>
 
-                            <button class="tree-person" type="button" data-target="paternal-grandmother">
-                                Rita Stein
-                                <span>Grandmother</span>
-                            </button>
-                        </div>
-
-                        <div class="family-branch">
-                            <button class="tree-person" type="button" data-target="maternal-grandfather">
-                                Claudio Morales
-                                <span>Grandfather</span>
-                            </button>
-
-                            <button class="tree-person" type="button" data-target="maternal-grandmother">
-                                Margarita Morales
-                                <span>Grandmother</span>
+                            <button class="tree-person tree-circle" type="button" data-target="paternal-grandmother">
+                                <span class="first-name">Rita</span>
+                                <span class="last-name">Stein</span>
+                                <small>Grandmother</small>
                             </button>
                         </div>
+
+                        <div class="tree-couple">
+                            <button class="tree-person tree-circle" type="button" data-target="maternal-grandfather">
+                                <span class="first-name">Claudio</span>
+                                <span class="last-name">Morales</span>
+                                <small>Grandfather</small>
+                            </button>
+
+                            <button class="tree-person tree-circle" type="button" data-target="maternal-grandmother">
+                                <span class="first-name">Margarita</span>
+                                <span class="last-name">Morales</span>
+                                <small>Grandmother</small>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="grandparent-connectors">
-                        <div class="connector-group"></div>
-                        <div class="connector-group"></div>
+                    <div class="connector-row grandparents-to-parents">
+                        <span></span>
+                        <span></span>
                     </div>
 
-                    <div class="tree-generation parents">
-                        <button class="tree-person" type="button" data-target="husband">
-                            Jeff Stein
-                            <span>Husband</span>
+                    <div class="tree-generation parent-generation">
+                        <button class="tree-person tree-circle" type="button" data-target="husband">
+                            <span class="first-name">Jeff</span>
+                            <span class="last-name">Stein</span>
+                            <small>Husband</small>
                         </button>
 
-                        <button class="tree-person" type="button" data-target="wife">
-                            Melissa Stein
-                            <span>Wife</span>
+                        <button class="tree-person tree-circle" type="button" data-target="wife">
+                            <span class="first-name">Melissa</span>
+                            <span class="last-name">Stein</span>
+                            <small>Wife</small>
+                        </button>
+                    </div>
+
+                    <div class="connector-row parents-to-children">
+                        <span></span>
+                    </div>
+
+                    <div class="tree-generation child-generation">
+                        <button class="tree-person tree-circle" type="button" data-target="daughter">
+                            <span class="first-name">Gabrielle</span>
+                            <span class="last-name">Stein</span>
+                            <small>Daughter</small>
+                        </button>
+
+                        <button class="tree-person tree-circle" type="button" data-target="son">
+                            <span class="first-name">Caleb</span>
+                            <span class="last-name">Stein</span>
+                            <small>Son</small>
                         </button>
                     </div>
 
-                    <div class="parent-connector"></div>
-
-                    <div class="tree-generation children">
-                        <button class="tree-person" type="button" data-target="daughter">
-                            Gabrielle Stein
-                            <span>Daughter</span>
-                        </button>
-
-                        <button class="tree-person" type="button" data-target="son">
-                            Caleb Stein
-                            <span>Son</span>
-                        </button>
-                    </div>
                 </div>
             </section>
 
@@ -102,7 +112,7 @@
                 <section id="paternal-grandfather" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">PG</div>
+                            <div class="profile-photo">HS</div>
                             <div class="profile-heading">
                                 <h3>Howard Stein</h3>
                             </div>
@@ -125,7 +135,7 @@
                 <section id="paternal-grandmother" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">PG</div>
+                            <div class="profile-photo">RS</div>
                             <div class="profile-heading">
                                 <h3>Rita Stein</h3>
                             </div>
@@ -148,7 +158,7 @@
                 <section id="maternal-grandfather" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">MG</div>
+                            <div class="profile-photo">CM</div>
                             <div class="profile-heading">
                                 <h3>Claudio Morales</h3>
                             </div>
@@ -171,7 +181,7 @@
                 <section id="maternal-grandmother" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">MG</div>
+                            <div class="profile-photo">MM</div>
                             <div class="profile-heading">
                                 <h3>Margarita Morales</h3>
                             </div>
@@ -185,7 +195,7 @@
                             <p><strong>Date of Birth:</strong> April 12, 1949</p>
                         </div>
 
-                         <p class="profile-link">
+                        <p class="profile-link">
                             <a href="https://www.google.com/maps?q=Northern Samar,Philippines" target="_blank">View location on map</a>
                         </p>
                     </div>
