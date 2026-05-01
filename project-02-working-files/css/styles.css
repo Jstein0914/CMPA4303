@@ -93,10 +93,7 @@ nav a:hover {
     margin-right: auto;
 }
 
-/* ========================= */
-/* FAMILY TREE (UPDATED)     */
-/* ========================= */
-
+/* Family Tree View */
 .tree-view {
     background-color: white;
     border: 1px solid tan;
@@ -121,28 +118,40 @@ nav a:hover {
     padding-top: 10px;
 }
 
-/* Tree Rows */
-.tree-row {
+/* Tree Generations */
+.tree-generation {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Grandparents */
+.grandparents {
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+/* Grandparent Couples */
+.family-branch {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
 /* Parents */
 .parents {
-    gap: 30px;
-    position: relative;
+    gap: 60px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 
 /* Children */
 .children {
-    gap: 70px;
-    position: relative;
+    gap: 80px;
     margin-top: 20px;
 }
 
-/* Tree Person */
+/* Tree Person Buttons */
 .tree-person {
     background-color: tan;
     color: black;
@@ -172,16 +181,22 @@ nav a:hover {
     border: 3px solid blue;
 }
 
-/* Connector Area */
-.tree-connector {
-    position: relative;
+/* Grandparent connector area */
+.grandparent-connectors {
+    display: flex;
+    justify-content: center;
+    gap: 330px;
     height: 90px;
-    width: 420px;
-    margin: 0 auto;
+    margin-top: 10px;
 }
 
-/* Vertical line from parents */
-.tree-connector::before {
+.connector-group {
+    position: relative;
+    width: 260px;
+    height: 90px;
+}
+
+.connector-group::before {
     content: "";
     position: absolute;
     top: 0;
@@ -192,8 +207,37 @@ nav a:hover {
     transform: translateX(-50%);
 }
 
-/* Horizontal branch */
-.tree-connector::after {
+.connector-group::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    width: 220px;
+    height: 4px;
+    background-color: brown;
+    transform: translateX(-50%);
+}
+
+/* Connector from parents to children */
+.parent-connector {
+    position: relative;
+    height: 90px;
+    width: 420px;
+    margin: 0 auto;
+}
+
+.parent-connector::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 4px;
+    height: 45px;
+    background-color: brown;
+    transform: translateX(-50%);
+}
+
+.parent-connector::after {
     content: "";
     position: absolute;
     top: 45px;
@@ -204,13 +248,11 @@ nav a:hover {
     transform: translateX(-50%);
 }
 
-/* Hide old lines */
-.vertical-line,
-.horizontal-line {
-    display: none;
+/* Lines from connector down to children */
+.children {
+    position: relative;
 }
 
-/* Lines down to children */
 .children::before,
 .children::after {
     content: "";
@@ -222,17 +264,14 @@ nav a:hover {
 }
 
 .children::before {
-    left: calc(50% - 115px);
+    left: calc(50% - 125px);
 }
 
 .children::after {
-    left: calc(50% + 115px);
+    left: calc(50% + 125px);
 }
 
-/* ========================= */
-/* CARDS (UNCHANGED)         */
-/* ========================= */
-
+/* Grid Layout */
 .family-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -240,6 +279,7 @@ nav a:hover {
     align-items: start;
 }
 
+/* Profile Card */
 .profile-card {
     background-color: white;
     border: 1px solid tan;
@@ -250,11 +290,13 @@ nav a:hover {
     overflow: hidden;
 }
 
+/* Active card */
 .active-card {
     border: 3px solid blue;
     background-color: lightyellow;
 }
 
+/* Full clickable header button */
 .card-toggle {
     display: block;
     width: 100%;
@@ -266,12 +308,14 @@ nav a:hover {
     cursor: pointer;
 }
 
+/* Top section */
 .profile-top {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
 
+/* Circle initials */
 .profile-photo {
     width: 60px;
     height: 60px;
@@ -286,20 +330,24 @@ nav a:hover {
     font-size: 1.2rem;
 }
 
+/* Name */
 .profile-heading h3 {
     margin: 0;
     color: brown;
     font-size: 2rem;
 }
 
+/* Content hidden by default */
 .card-content {
     display: none;
 }
 
+/* Show content when active */
 .active-card .card-content {
     display: block;
 }
 
+/* Details */
 .profile-details {
     margin-top: 10px;
 }
@@ -309,6 +357,7 @@ nav a:hover {
     font-size: 1.3rem;
 }
 
+/* Links */
 .profile-link {
     margin-top: 15px;
 }
@@ -335,6 +384,14 @@ a:hover {
         width: auto;
         margin-left: 390px;
         margin-right: 20px;
+    }
+
+    .grandparents {
+        gap: 40px;
+    }
+
+    .grandparent-connectors {
+        gap: 180px;
     }
 }
 
@@ -363,32 +420,33 @@ a:hover {
         padding: 20px;
     }
 
-    .tree-row {
+    .tree-generation,
+    .grandparents,
+    .parents,
+    .children,
+    .family-branch {
         flex-direction: column;
         align-items: center;
         gap: 16px;
     }
 
-    .parents,
-    .children {
-        gap: 16px;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    .tree-connector {
+    .grandparent-connectors,
+    .parent-connector {
         height: 40px;
         width: 4px;
+        gap: 0;
     }
 
-    .tree-connector::before {
-        height: 40px;
-    }
-
-    .tree-connector::after,
+    .connector-group,
+    .connector-group::after,
+    .parent-connector::after,
     .children::before,
     .children::after {
         display: none;
+    }
+
+    .parent-connector::before {
+        height: 40px;
     }
 
     .family-grid {
