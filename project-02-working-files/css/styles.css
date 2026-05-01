@@ -417,7 +417,10 @@ a:hover {
     }
 
     .grandparent-generation {
-        gap: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
     }
 
     .parent-generation {
@@ -426,6 +429,16 @@ a:hover {
 
     .child-generation {
         gap: 80px;
+    }
+
+    .connector-row,
+    .grandparents-to-parents::before,
+    .parents-to-children::before,
+    .parents-to-children::after,
+    .grandparents-to-parents span,
+    .parents-to-children span::before,
+    .parents-to-children span::after {
+        display: none;
     }
 }
 
@@ -451,18 +464,42 @@ a:hover {
         padding: 20px;
     }
 
-    .tree-generation,
-    .grandparent-generation,
-    .parent-generation,
-    .child-generation,
-    .tree-couple {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
+    .tree-view {
+        padding: 18px;
     }
 
-    .connector-row,
+    .grandparent-generation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .tree-couple {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .parent-generation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+    .child-generation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        margin-top: 28px;
+    }
+
     .tree-couple::before,
+    .connector-row,
     .grandparents-to-parents::before,
     .parents-to-children::before,
     .parents-to-children::after,
