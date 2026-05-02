@@ -100,6 +100,12 @@ nav a:hover {
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 30px;
+
+/* Background tree image */
+    background-image: url('../images/tree-bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 85%;
 }
 
 .tree-view h2 {
@@ -148,7 +154,7 @@ nav a:hover {
     left: 25%;
     right: 25%;
     height: 4px;
-    background-color: brown;
+    background-color: saddlebrown;
     z-index: 0;
 }
 
@@ -238,7 +244,7 @@ nav a:hover {
     left: 25%;
     right: 25%;
     height: 4px;
-    background-color: brown;
+    background-color: saddlebrown;
 }
 
 .grandparents-to-parents span {
@@ -246,7 +252,7 @@ nav a:hover {
     top: 0;
     width: 4px;
     height: 80px;
-    background-color: brown;
+    background-color: saddlebrown;
 }
 
 .grandparents-to-parents span:first-child {
@@ -269,7 +275,7 @@ nav a:hover {
     left: 15%;
     right: 15%;
     height: 4px;
-    background-color: brown;
+    background-color: saddlebrown;
 }
 
 .parents-to-children::after {
@@ -279,7 +285,7 @@ nav a:hover {
     left: 50%;
     width: 4px;
     height: 80px;
-    background-color: brown;
+    background-color: saddlebrown;
     transform: translateX(-50%);
 }
 
@@ -290,7 +296,7 @@ nav a:hover {
     top: 38px;
     width: 4px;
     height: 42px;
-    background-color: brown;
+    background-color: saddlebrown;
 }
 
 .parents-to-children span::before {
@@ -424,6 +430,10 @@ a:hover {
         margin-right: 20px;
     }
 
+    .tree-view {
+         background-image: none;
+    }
+    
     .grandparent-generation {
         display: flex;
         flex-direction: column;
@@ -473,7 +483,7 @@ a:hover {
     }
 
     .tree-view {
-        padding: 18px;
+         background-image: none;
     }
 
     .grandparent-generation {
