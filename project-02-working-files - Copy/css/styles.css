@@ -100,6 +100,12 @@ nav a:hover {
     border-radius: 12px;
     padding: 24px;
     margin-bottom: 30px;
+
+/* Background tree image */
+    background-image: url('../images/tree-bg.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 85%;
 }
 
 .tree-view h2 {
@@ -112,163 +118,193 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Tree Container */
-.tree {
+/* Final Tree Layout */
+.final-tree {
     text-align: center;
-    padding-top: 10px;
+    padding: 20px 10px;
 }
 
-/* Tree Generations */
+/* Each generation row */
 .tree-generation {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Grandparents */
-.grandparents {
+/* Grandparents row */
+.grandparent-generation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
-    flex-wrap: wrap;
 }
 
-/* Grandparent Couples */
-.family-branch {
+/* Grandparent couples */
+.tree-couple {
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    gap: 24px;
     position: relative;
 }
 
-/* Parents */
-.parents {
-    gap: 60px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* Small line between each couple */
+.tree-couple::before {
+    content: "";
+    position: absolute;
+    top: 62px;
+    left: 25%;
+    right: 25%;
+    height: 4px;
+    background-color: saddlebrown;
+    z-index: 0;
 }
 
-/* Children */
-.children {
-    gap: 80px;
-    margin-top: 20px;
+/* Parents row */
+.parent-generation {
+    gap: 180px;
 }
 
-/* Tree Person Buttons */
-.tree-person {
+/* Children row */
+.child-generation {
+    gap: 120px;
+}
+
+/* Circle person nodes */
+.tree-circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
     background-color: tan;
+    border: 3px solid brown;
     color: black;
-    border: 2px solid brown;
-    border-radius: 12px;
-    padding: 16px 24px;
-    min-width: 190px;
-    font-size: 1.1rem;
     font-weight: bold;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
 }
 
-.tree-person span {
+/* Name formatting */
+.tree-circle span {
     display: block;
-    color: blue;
-    font-size: 0.9rem;
-    margin-top: 5px;
+    line-height: 1.1;
 }
 
-.tree-person:hover {
+/* First name */
+.tree-circle .first-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: brown;
+}
+
+/* Last name */
+.tree-circle .last-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: brown;
+}
+
+/* Role */
+.tree-circle small {
+    font-size: 0.75rem;
+    color: blue;
+}
+
+/* Hover */
+.tree-circle:hover {
     background-color: lightyellow;
 }
 
 /* Active Tree Person */
 .active-tree-person {
     background-color: lightyellow;
-    border: 3px solid blue;
+    border: 4px solid blue;
 }
 
-/* Grandparent connector area */
-.grandparent-connectors {
-    display: flex;
-    justify-content: center;
-    gap: 330px;
-    height: 90px;
-    margin-top: 10px;
-}
-
-.connector-group {
+/* Connector rows */
+.connector-row {
     position: relative;
-    width: 260px;
-    height: 90px;
-}
-
-.connector-group::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 4px;
-    height: 45px;
-    background-color: brown;
-    transform: translateX(-50%);
-}
-
-.connector-group::after {
-    content: "";
-    position: absolute;
-    top: 45px;
-    left: 50%;
-    width: 220px;
-    height: 4px;
-    background-color: brown;
-    transform: translateX(-50%);
-}
-
-/* Connector from parents to children */
-.parent-connector {
-    position: relative;
-    height: 90px;
-    width: 420px;
+    height: 80px;
     margin: 0 auto;
 }
 
-.parent-connector::before {
+/* Grandparents to parents connector */
+.grandparents-to-parents {
+    width: 740px;
+}
+
+.grandparents-to-parents::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: 25%;
+    right: 25%;
+    height: 4px;
+    background-color: saddlebrown;
+}
+
+.grandparents-to-parents span {
+    position: absolute;
+    top: 0;
+    width: 4px;
+    height: 80px;
+    background-color: saddlebrown;
+}
+
+.grandparents-to-parents span:first-child {
+    left: 25%;
+}
+
+.grandparents-to-parents span:last-child {
+    right: 25%;
+}
+
+/* Parents to children connector */
+.parents-to-children {
+    width: 500px;
+}
+
+.parents-to-children::before {
+    content: "";
+    position: absolute;
+    top: 38px;
+    left: 15%;
+    right: 15%;
+    height: 4px;
+    background-color: saddlebrown;
+}
+
+.parents-to-children::after {
     content: "";
     position: absolute;
     top: 0;
     left: 50%;
     width: 4px;
-    height: 45px;
-    background-color: brown;
+    height: 80px;
+    background-color: saddlebrown;
     transform: translateX(-50%);
 }
 
-.parent-connector::after {
+.parents-to-children span::before,
+.parents-to-children span::after {
     content: "";
     position: absolute;
-    top: 45px;
-    left: 50%;
-    width: 360px;
-    height: 4px;
-    background-color: brown;
-    transform: translateX(-50%);
-}
-
-/* Lines from connector down to children */
-.children {
-    position: relative;
-}
-
-.children::before,
-.children::after {
-    content: "";
-    position: absolute;
-    top: -65px;
+    top: 38px;
     width: 4px;
-    height: 65px;
-    background-color: brown;
+    height: 42px;
+    background-color: saddlebrown;
 }
 
-.children::before {
-    left: calc(50% - 125px);
+.parents-to-children span::before {
+    left: 15%;
 }
 
-.children::after {
-    left: calc(50% + 125px);
+.parents-to-children span::after {
+    right: 15%;
 }
 
 /* Grid Layout */
@@ -378,6 +414,14 @@ a:hover {
     color: brown;
 }
 
+ .tree-circle {
+        transition: transform 0.2s ease;
+    }
+
+.tree-circle:hover {
+        transform: scale(1.05);
+    }
+
 /* Tablet */
 @media (max-width: 1400px) {
     .content-area {
@@ -386,12 +430,50 @@ a:hover {
         margin-right: 20px;
     }
 
-    .grandparents {
-        gap: 40px;
+    .tree-view {
+        background-image: none;
     }
 
-    .grandparent-connectors {
-        gap: 180px;
+    .grandparent-generation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .tree-couple {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .parent-generation {
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+    .child-generation {
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+        margin-top: 28px;
+    }
+
+    .connector-row,
+    .grandparents-to-parents::before,
+    .parents-to-children::before,
+    .parents-to-children::after,
+    .grandparents-to-parents span,
+    .parents-to-children span::before,
+    .parents-to-children span::after {
+        display: none;
+    }
+
+    .tree-circle {
+        width: 115px;
+        height: 115px;
     }
 }
 
@@ -405,51 +487,71 @@ a:hover {
     .side-nav {
         position: static;
         width: auto;
-        top: auto;
-        bottom: auto;
         margin-bottom: 20px;
     }
 
     .content-area {
         width: auto;
         margin-left: 0;
-        margin-right: 0;
     }
 
     .page-layout {
         padding: 20px;
     }
 
-    .tree-generation,
-    .grandparents,
-    .parents,
-    .children,
-    .family-branch {
+    .tree-view {
+         background-image: none;
+    }
+
+    .grandparent-generation {
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        gap: 24px;
     }
 
-    .grandparent-connectors,
-    .parent-connector {
-        height: 40px;
-        width: 4px;
-        gap: 0;
+    .tree-couple {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
 
-    .connector-group,
-    .connector-group::after,
-    .parent-connector::after,
-    .children::before,
-    .children::after {
+    .parent-generation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+    .child-generation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        margin-top: 28px;
+    }
+
+    .tree-couple::before,
+    .connector-row,
+    .grandparents-to-parents::before,
+    .parents-to-children::before,
+    .parents-to-children::after,
+    .grandparents-to-parents span,
+    .parents-to-children span::before,
+    .parents-to-children span::after {
         display: none;
     }
 
-    .parent-connector::before {
-        height: 40px;
+    .tree-circle {
+        width: 120px;
+        height: 120px;
     }
 
     .family-grid {
         grid-template-columns: 1fr;
     }
+
+   
 }

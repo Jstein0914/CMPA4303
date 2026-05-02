@@ -36,64 +36,75 @@
                 <h2>Family Tree View</h2>
                 <p>Select a family member in the tree to open their profile card below.</p>
 
-                <div class="tree">
+                <div class="tree final-tree">
 
-                    <div class="tree-generation grandparents">
-                        <div class="family-branch">
-                            <button class="tree-person" type="button" data-target="paternal-grandfather">
-                                Howard Stein
-                                <span>Grandfather</span>
+                    <div class="tree-generation grandparent-generation">
+                        <div class="tree-couple">
+                            <button class="tree-person tree-circle" type="button" data-target="paternal-grandfather">
+                                <span class="first-name">Howard</span>
+                                <span class="last-name">Stein</span>
+                                <small>Grandfather</small>
                             </button>
 
-                            <button class="tree-person" type="button" data-target="paternal-grandmother">
-                                Rita Stein
-                                <span>Grandmother</span>
-                            </button>
-                        </div>
-
-                        <div class="family-branch">
-                            <button class="tree-person" type="button" data-target="maternal-grandfather">
-                                Claudio Morales
-                                <span>Grandfather</span>
-                            </button>
-
-                            <button class="tree-person" type="button" data-target="maternal-grandmother">
-                                Margarita Morales
-                                <span>Grandmother</span>
+                            <button class="tree-person tree-circle" type="button" data-target="paternal-grandmother">
+                                <span class="first-name">Rita</span>
+                                <span class="last-name">Stein</span>
+                                <small>Grandmother</small>
                             </button>
                         </div>
+
+                        <div class="tree-couple">
+                            <button class="tree-person tree-circle" type="button" data-target="maternal-grandfather">
+                                <span class="first-name">Claudio</span>
+                                <span class="last-name">Morales</span>
+                                <small>Grandfather</small>
+                            </button>
+
+                            <button class="tree-person tree-circle" type="button" data-target="maternal-grandmother">
+                                <span class="first-name">Margarita</span>
+                                <span class="last-name">Morales</span>
+                                <small>Grandmother</small>
+                            </button>
+                        </div>
                     </div>
 
-                    <div class="grandparent-connectors">
-                        <div class="connector-group"></div>
-                        <div class="connector-group"></div>
+                    <div class="connector-row grandparents-to-parents">
+                        <span></span>
+                        <span></span>
                     </div>
 
-                    <div class="tree-generation parents">
-                        <button class="tree-person" type="button" data-target="husband">
-                            Jeff Stein
-                            <span>Husband</span>
+                    <div class="tree-generation parent-generation">
+                        <button class="tree-person tree-circle" type="button" data-target="husband">
+                            <span class="first-name">Jeff</span>
+                            <span class="last-name">Stein</span>
+                            <small>Husband</small>
                         </button>
 
-                        <button class="tree-person" type="button" data-target="wife">
-                            Melissa Stein
-                            <span>Wife</span>
+                        <button class="tree-person tree-circle" type="button" data-target="wife">
+                            <span class="first-name">Melissa</span>
+                            <span class="last-name">Stein</span>
+                            <small>Wife</small>
+                        </button>
+                    </div>
+
+                    <div class="connector-row parents-to-children">
+                        <span></span>
+                    </div>
+
+                    <div class="tree-generation child-generation">
+                        <button class="tree-person tree-circle" type="button" data-target="daughter">
+                            <span class="first-name">Gabrielle</span>
+                            <span class="last-name">Stein</span>
+                            <small>Daughter</small>
+                        </button>
+
+                        <button class="tree-person tree-circle" type="button" data-target="son">
+                            <span class="first-name">Caleb</span>
+                            <span class="last-name">Stein</span>
+                            <small>Son</small>
                         </button>
                     </div>
 
-                    <div class="parent-connector"></div>
-
-                    <div class="tree-generation children">
-                        <button class="tree-person" type="button" data-target="daughter">
-                            Gabrielle Stein
-                            <span>Daughter</span>
-                        </button>
-
-                        <button class="tree-person" type="button" data-target="son">
-                            Caleb Stein
-                            <span>Son</span>
-                        </button>
-                    </div>
                 </div>
             </section>
 
@@ -102,7 +113,7 @@
                 <section id="paternal-grandfather" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">PG</div>
+                            <div class="profile-photo">HS</div>
                             <div class="profile-heading">
                                 <h3>Howard Stein</h3>
                             </div>
@@ -112,12 +123,16 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Paternal Grandfather</p>
-                            <p><strong>Location of Birth:</strong> Chicago, Illinois</p>
-                            <p><strong>Date of Birth:</strong> December 28, 1929</p>
+                            <p><strong>b.</strong> December 28, 1929 - Chicago, Illinois</p>
+                            <p><strong>m.</strong> To be added</p>
+                            <p><strong>d.</strong> September 29, 2006</p>
                         </div>
 
                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Chicago,Illinois" target="_blank">View location on map</a>
+                            <a href="https://www.google.com/maps?q=Chicago,Illinois" target="_blank">Explore birth location on map</a>
+                        </p>
+                        <p>
+                            <a href="http://westlawncemetery.org/" target="_blank"> WestLawn Cemetery Burial Plot C-2-12-11</a>
                         </p>
                     </div>
                 </section>
@@ -125,7 +140,7 @@
                 <section id="paternal-grandmother" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">PG</div>
+                            <div class="profile-photo">RS</div>
                             <div class="profile-heading">
                                 <h3>Rita Stein</h3>
                             </div>
@@ -135,12 +150,16 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Paternal Grandmother</p>
-                            <p><strong>Location of Birth:</strong> Chicago, Illinois</p>
-                            <p><strong>Date of Birth:</strong> August 6, 1931</p>
+                            <p><strong>b.</strong> August 6, 1931 - Chicago, Illinois</p>
+                            <p><strong>m.</strong> To be added</p>
+                            <p><strong>d.</strong> March 25, 1999</p>
                         </div>
 
                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Chicago,Illinois" target="_blank">View location on map</a>
+                            <a href="https://www.google.com/maps?q=Chicago,Illinois" target="_blank">Explore birth location on map</a>
+                        </p>
+                        <p class="profile-link">
+                           <a href="http://westlawncemetery.org/" target="_blank">Westlawn Cemetery Burial Plot C-7-12-8</a>
                         </p>
                     </div>
                 </section>
@@ -148,7 +167,7 @@
                 <section id="maternal-grandfather" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">MG</div>
+                            <div class="profile-photo">CM</div>
                             <div class="profile-heading">
                                 <h3>Claudio Morales</h3>
                             </div>
@@ -158,20 +177,24 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Maternal Grandfather</p>
-                            <p><strong>Location of Birth:</strong> Northern Samar, Philippines</p>
-                            <p><strong>Date of Birth:</strong> June 13, 1942</p>
+                            <p><strong>b.</strong> June 13, 1942 - Northern Samar, Philippines</p>
+                            <p><strong>m.</strong> March 15, 1969</p>
+                            <p><strong>d.</strong> January 19, 2026</p>
                         </div>
 
                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Northern Samar,Philippines" target="_blank">View location on map</a>
+                            <a href="https://www.google.com/maps?q=Northern Samar,Philippines" target="_blank">Explore birth location on map</a>
                         </p>
+                        <p>
+                            <a href="https://maps.app.goo.gl/fHLdf62FKDXrBxEv7" target="_blank">Laoang Cemetery </a>
+                        </p>  
                     </div>
                 </section>
 
                 <section id="maternal-grandmother" class="profile-card collapsible-card">
                     <button class="card-toggle" type="button">
                         <div class="profile-top">
-                            <div class="profile-photo">MG</div>
+                            <div class="profile-photo">MM</div>
                             <div class="profile-heading">
                                 <h3>Margarita Morales</h3>
                             </div>
@@ -181,12 +204,13 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Maternal Grandmother</p>
-                            <p><strong>Location of Birth:</strong> Northern Samar, Philippines</p>
-                            <p><strong>Date of Birth:</strong> April 12, 1949</p>
+                            <p><strong>b.</strong> April 12, 1949 - Northern Samar, Philippines</p>
+                            <p><strong>m.</strong> March 15, 1969</p>
+                            <p><strong>d.</strong> --</p>
                         </div>
-
-                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Northern Samar,Philippines" target="_blank">View location on map</a>
+                            
+                        <p class="profile-link">
+                            <a href="https://www.google.com/maps?q=Northern Samar,Philippines" target="_blank">Explore birth location on map</a>
                         </p>
                     </div>
                 </section>
@@ -204,12 +228,13 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Husband</p>
-                            <p><strong>Location of Birth:</strong> Evanston, Illinois</p>
-                            <p><strong>Date of Birth:</strong> September 14, 1971</p>
+                            <p><strong>b.</strong> September 14, 1971 - Evanston, Illinois</p>
+                            <p><strong>m.</strong> August 1, 2013</p>
+                            <p><strong>d.</strong> --</p>
                         </div>
 
                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Evanston,Illinois" target="_blank">View location on map</a>
+                            <a href="https://www.google.com/maps?q=Evanston,Illinois" target="_blank">Explore birth location on map</a>
                         </p>
                     </div>
                 </section>
@@ -227,12 +252,13 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Wife</p>
-                            <p><strong>Location of Birth:</strong> Manila, Philippines</p>
-                            <p><strong>Date of Birth:</strong> January 13, 1982</p>
+                            <p><strong>b.</strong> January 13, 1982 - Manila, Philippines</p>
+                            <p><strong>m.</strong> August 1, 2013</p>
+                            <p><strong>d.</strong> --</p>
                         </div>
 
                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Manila,Philippines" target="_blank">View location on map</a>
+                            <a href="https://www.google.com/maps?q=Manila,Philippines" target="_blank">Explore birth location on map</a>
                         </p>
                     </div>
                 </section>
@@ -250,12 +276,13 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Daughter</p>
-                            <p><strong>Location of Birth:</strong> Frisco, Texas</p>
-                            <p><strong>Date of Birth:</strong> November 26, 2014</p>
+                            <p><strong>b.</strong> November 26, 2014 - Frisco, Texas</p>
+                            <p><strong>m.</strong> --</p>
+                            <p><strong>d.</strong> --</p>
                         </div>
 
                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Frisco,Texas" target="_blank">View location on map</a>
+                            <a href="https://www.google.com/maps?q=Frisco,Texas" target="_blank">Explore birth location on map</a>
                         </p>
                     </div>
                 </section>
@@ -273,12 +300,13 @@
                     <div class="card-content">
                         <div class="profile-details">
                             <p><strong>Relationship:</strong> Son</p>
-                            <p><strong>Location of Birth:</strong> Frisco, Texas</p>
-                            <p><strong>Date of Birth:</strong> November 26, 2018</p>
+                            <p><strong>b.</strong> November 26, 2018 - Frisco, Texas</p>
+                            <p><strong>m.</strong> --</p>
+                            <p><strong>d.</strong> --</p>
                         </div>
-
+                        
                         <p class="profile-link">
-                            <a href="https://www.google.com/maps?q=Frisco,Texas" target="_blank">View location on map</a>
+                            <a href="https://www.google.com/maps?q=Frisco,Texas" target="_blank">Explore birth location on map</a>
                         </p>
                     </div>
                 </section>
