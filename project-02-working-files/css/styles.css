@@ -431,22 +431,34 @@ a:hover {
     }
 
     .tree-view {
-         background-image: none;
+        background-image: none;
     }
-    
+
     .grandparent-generation {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 24px;
     }
 
+    .tree-couple {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+    }
+
     .parent-generation {
-        gap: 120px;
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+        margin-top: 28px;
+        margin-bottom: 28px;
     }
 
     .child-generation {
-        gap: 80px;
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+        margin-top: 28px;
     }
 
     .connector-row,
@@ -457,6 +469,11 @@ a:hover {
     .parents-to-children span::before,
     .parents-to-children span::after {
         display: none;
+    }
+
+    .tree-circle {
+        width: 115px;
+        height: 115px;
     }
 }
 
