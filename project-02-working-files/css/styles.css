@@ -408,6 +408,14 @@ a:hover {
     color: brown;
 }
 
+ .tree-circle {
+        transition: transform 0.2s ease;
+    }
+
+.tree-circle:hover {
+        transform: scale(1.05);
+    }
+
 /* Tablet */
 @media (max-width: 1400px) {
     .content-area {
@@ -517,4 +525,6 @@ a:hover {
     .family-grid {
         grid-template-columns: 1fr;
     }
+
+   
 }
